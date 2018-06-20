@@ -193,52 +193,6 @@ protected:
 	string phonenumber;     //客户电话号码
 };
 
-class ticket
-{
-public:
-	ticket()
-	{
-		planeid = 0;
-		fightid = "0";
-		stastation = "0";
-		lasstation = "0";
-		cabinlelve = 0;
-		seatid = 0;
-		price = 0;
-	}
-	ticket(int pid, int fid, string stas, string lass, flight_time t1, flight_time t2, int cabl, float pri)
-	{
-		planeid = pid;
-		fightid = fid;
-		stastation = stas;
-		lasstation = lass;
-		statime = t1;
-		lastime = t2;
-		cabinlelve = cabl;
-		price = pri;
-	}
-	int seatid;				//座位号
-	user user1;
-protected:
-	int planeid;			//飞机号
-	string fightid;			//航班号
-	string stastation;		//起始站
-	string lasstation;		//终点站
-	flight_time statime;	//出发时间
-	flight_time lastime;	//到站时间
-	int cabinlelve;			//座位等级
-	float price;			//票价
-};
-
-
-class ticket_record
-{
-public:
-	int level;		//票的种类
-	int number;
-	int waitnumer;
-
-};
 
 int    locatedMassage(string);		//返回的是航班的文件位置（从0开始）
 flight readflight(int);

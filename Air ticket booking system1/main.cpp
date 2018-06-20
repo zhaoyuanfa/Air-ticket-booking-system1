@@ -119,6 +119,7 @@ int main()
 	cout << endl << endl;
 	while (1)
 	{
+		int exitv = 0;
 		switch (choose)
 		{
 		case 0:
@@ -324,7 +325,7 @@ int main()
 				while (1)
 				{
 					cout << "|-----------------------------当前位置：管理员操作页面---------------------------------|" << endl;
-					cout << "功能选择：  1、发布机票                 2、查看机票信息" << endl;
+					cout << "功能选择：  1、发布航班信息                 2、查看机票信息" << endl;
 					cout << "            3、查看订票信息             4、修改航班信息" << endl;
 					cout << "            0、回到初始页面" << endl;
 					cout << endl << "请选择功能：";
@@ -346,7 +347,7 @@ int main()
 						exitchoose = 1;
 						break;
 					}
-					case 1:		//发布机票
+					case 1:		//发布航班信息
 					{
 						int pid, y, m, d, h, mi; string we;
 						int y1, m1, d1, h1, mi1; string we1, flid;
@@ -360,9 +361,9 @@ int main()
 						{
 							system("cls");
 							cout << endl << endl;
-							cout << "发布机票，请谨慎输入！！" << endl;
+							cout << "发布航班信息，请谨慎输入！！" << endl;
 							cout << endl << endl;
-							cout << "|-------------------------------发布机票界面---------------------------------|" << endl;
+							cout << "|-------------------------------发布航班信息界面---------------------------------|" << endl;
 							cout << "请输入航班号：";
 							cin >> flid;
 							cout << "请输入飞机编号（数字编号）：";
@@ -842,11 +843,13 @@ int main()
 		}
 		case 4:
 		{
-			exit(0);
+			exitv=1;
 			break;
 		}
 
 		}
+		if (exitv == 1)
+			break;
 
 	}
 
